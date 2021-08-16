@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'remote_api.dart';
 
 void main() {
   runApp(MyApp());
 }
 
+// ignore: must_be_immutable
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  //const MyApp({Key? key}) : super(key: key);
+  
 
   @override
   Widget build(BuildContext context) {
@@ -95,100 +98,7 @@ class MyApp extends StatelessWidget {
                           ],
                         ),
                         Flexible(
-                          child: ListView(
-                            scrollDirection: Axis.horizontal,
-                            children: [
-                              Column(
-                                //crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  SizedBox(
-                                    width: 150,
-                                    height: 210,
-                                    child: ClipRRect(
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(30)),
-                                      child: Card(
-                                        child: Image.network(
-                                          'https://iso.500px.com/wp-content/uploads/2016/03/stock-photo-142984111.jpg',
-                                          fit: BoxFit.fill,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Text('New York',
-                                      style: TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.bold)),
-                                ],
-                              ),
-                              Column(
-                                children: [
-                                  SizedBox(
-                                    width: 150,
-                                    height: 210,
-                                    child: ClipRRect(
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(30)),
-                                      child: Card(
-                                        child: Image.network(
-                                          'https://iso.500px.com/wp-content/uploads/2016/03/stock-photo-142984111.jpg',
-                                          fit: BoxFit.fill,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Text('New York',
-                                      style: TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.bold)),
-                                ],
-                              ),
-                              Column(
-                                children: [
-                                  SizedBox(
-                                    width: 150,
-                                    height: 210,
-                                    child: ClipRRect(
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(30)),
-                                      child: Card(
-                                        child: Image.network(
-                                          'https://iso.500px.com/wp-content/uploads/2016/03/stock-photo-142984111.jpg',
-                                          fit: BoxFit.fill,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Text('New York',
-                                      style: TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.bold)),
-                                ],
-                              ),
-                              Column(
-                                children: [
-                                  SizedBox(
-                                    width: 150,
-                                    height: 210,
-                                    child: ClipRRect(
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(30)),
-                                      child: Card(
-                                        child: Image.network(
-                                          'https://iso.500px.com/wp-content/uploads/2016/03/stock-photo-142984111.jpg',
-                                          fit: BoxFit.fill,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Text('New York',
-                                      style: TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.bold)),
-                                ],
-                              ),
-                            ],
-                          ),
+                          child: RemoteApi(),
                         )
                       ],
                     ),
