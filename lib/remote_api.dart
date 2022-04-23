@@ -16,7 +16,7 @@ class _RemoteApiState extends State<RemoteApi> {
 
   getData() async {
     http.Response response = await http.get(Uri.parse(
-        'https://api.unsplash.com/photos/?client_id=53MbMXPU_-UeVIminZJWN6vIqUe37RvZ89SsXXT73cM'));
+        'API_LINK'));
     data = json.decode(response.body);
     _assign();
     showimg = true;
